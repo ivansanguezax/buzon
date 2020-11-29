@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Buzon de Sugerencias</title>
+    <link rel="icon" type="image/png" href="images/icon-logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/script.js" language="javascript" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  </head>
+  <body>
+    <i class="icon-menu burger-menu" id="burger-menu"></i>
+    <header class="header">
+      <div class="container">
+        <figure class="logo">
+          <img src="images/logo.png" height="50" alt="" />
+        </figure>
+        <nav class="menu">
+          <ol>
+            <li>
+              <a class="link" href="#">Inicio</a>
+            </li>
+            <li>
+              <a class="link" href="https://www.umsa.bo/">UMSA</a>
+            </li>
+            <li>
+              <a class="link" href="https://informatica.edu.bo/">Informatica</a>
+            </li>
+            <li>
+              <a class="link" href="">Iniciar Sesion</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+
+
+
+    <section class="hero">
+      <div class="container">
+        <h1>
+          
+          <strong>Quejas</strong> y <strong>Sugerencias</strong> <br>
+          
+        </h1>
+        <img src="/images/Pc.png" width="200px" alt="">
+      </div>
+    </section>
+
+    <div class="container">
+    <div class="titulo">
+      <h1> 
+        <strong>Buzon Virtual</strong>
+      </h1>
+     
+    </div>
+  </div>
+
+
+    <!-- Formulario de Quejas -->
+
+
+    <div class="containers">  
+      <form id="contact" action="" method="post">
+        <h3>Llena aqui</h3>
+        <h4>Con el propósito de proporcionar un mecanismo de comunicación efectiva ponemos a tu disposición este Servicio</h4>
+        <fieldset>
+          <input placeholder="Tu nombre" type="text" tabindex="1" id="Nombre" required autofocus>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Correo electronico" type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Numero de Celular (Opcional)" type="tel" tabindex="3" required>
+        </fieldset>
+        
+        <fieldset>
+          <input placeholder="Queja o Sugerencia" type="text" tabindex="4" required>
+        </fieldset>
+        <fieldset>
+          <textarea placeholder="Escriba su mensaje aqui" tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+          <p>Inserte una imagen (Opcional)</p>
+          <br>
+          <input type="file" name="image" id="file">
+    <div class="preview">
+      <p id="username"></p>
+      <img id="image">
+    </div>
+        </fieldset>
+
+        <fieldset>
+          <button  name="submit" type="submit"  onclick="buttonChange(this);" id="holaNombre" value="Hola">Enviar</button>
+        
+        </fieldset>
+        
+      </form>
+
+
+     
+    </div>
+    
+
+
+    <!-- Pie de Pagina -->
+    
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <p>Universidad Mayor de San Andres</p>
+        </div>
+        <div>
+          <p>
+            Diseñado por Alina Ramirez
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+
+      // Funcion que hace el boton de hamburguesa menu
+      const $burgerMenu = document.querySelector('#burger-menu');
+      const $menu = document.querySelector('.menu');
+      const ipad = window.matchMedia('(max-width: 767px)');
+      runBurgerMenu(ipad.matches);
+      ipad.addListener((event) => {
+        runBurgerMenu(event.matches)
+      })
+      function hideShow() {
+        if ($menu.classList.contains('is-active')) {
+          $menu.classList.remove('is-active');
+        } else {
+          $menu.classList.add('is-active');
+        }
+      }
+      function runBurgerMenu(yes) {
+        if (yes) {
+          $burgerMenu.addEventListener('click', hideShow);
+        } else {
+          $burgerMenu.removeEventListener('click', hideShow);
+        }
+      }
+
+
+     
+    </script>
+  </body>
+</html>
