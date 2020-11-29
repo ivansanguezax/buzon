@@ -5,7 +5,7 @@ function buttonChange( that ){
   if( that.id == 'holaNombre' ){
     let nombre = document.getElementById('Nombre').value;
     alert( val + ' ' + nombre + ' gracias por tu mensaje te mandaremos un correo lo mas antes posible' );
-    window.location='index.html'; 
+    window.location='/index.html'; 
   }else{
     alert( val ); 
   }
